@@ -1,4 +1,17 @@
 import axios from "axios"
+import {
+  NEW_CONNECTOR_QWERTR_USERNAME,
+  NEW_CONNECTOR_QWERTR_PASSWORD
+} from "react-native-dotenv"
+const newConnectorqwertr = axios.create({
+  baseURL:
+    "https://crowdbotics-slack-dev.herokuapp.com/dashboard/app/13028/storyboard/12000/",
+  auth: {
+    username: NEW_CONNECTOR_QWERTR_USERNAME,
+    password: NEW_CONNECTOR_QWERTR_PASSWORD
+  },
+  headers: { Accept: "application/json", "Content-Type": "application/json" }
+})
 const testConnectordf = axios.create({
   baseURL:
     "https://crowdbotics-slack-dev.herokuapp.com/dashboard/app/13028/storyboard/12000/",
